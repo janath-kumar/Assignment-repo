@@ -26,9 +26,9 @@ jobs:
         aws-secret-access-key: ECeoAKpgj1phFFgCjnEPul52QTbkzM6O77LrHThS
         aws-region: ap-south-1
 
-    - name: Login to Amazon ECR
-      id: login-ecr
-      uses: aws-actions/amazon-ecr-login@v1
+    # - name: Login to Amazon ECR
+    #   id: login-ecr
+    #   uses: aws-actions/amazon-ecr-login@v1
 
     - name: Build, tag, and push image to Amazon ECR
       env:
@@ -37,5 +37,6 @@ jobs:
         ECR_REPOSITORY: github_samplenode
         IMAGE_TAG: sample_image
       run: |
+        docker login 339388403827.dkr.ecr.ap-south-1.amazonaws.com
         docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
         docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
