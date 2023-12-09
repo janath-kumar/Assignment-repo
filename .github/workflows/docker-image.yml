@@ -34,7 +34,7 @@ jobs:
       env:
         # ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
         ECR_REGISTRY: 339388403827.dkr.ecr.ap-south-1.amazonaws.com
-        ECR_REPOSITORY: githubaction-sample
+        ECR_REPOSITORY: github_samplenode
         IMAGE_TAG: sample_image
       run: |
         docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
