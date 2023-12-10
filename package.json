@@ -1,16 +1,17 @@
 {
-    "name": "docker_nodejs_demo",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
-    "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
-    "dependencies": {
-      "config": "^3.3.6",
-      "express": "^4.17.1"
-    }
-  }
+  "name": "your-node-app",
+  "version": "1.0.0",
+  "description": "My Node.js Application",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+    
+  },
+  "devDependencies": {},
+  "keywords": [],
+  "author": "Your Name",
+  "license": "MIT"
+}
